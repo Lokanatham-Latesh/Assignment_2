@@ -1,0 +1,3 @@
+echo "Name: Lokanatham Latesh
+Skills: HTML, CSS, JS, Next.js
+Email: lokanathamlatesh@gmail.com" 
