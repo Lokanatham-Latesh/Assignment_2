@@ -1,0 +1,310 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #212020;
+    color: #444;
+    /*background-image: url('pexels-photo.jpeg'); /* Replace with your image URL */ 
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: backgroundSlide  linear infinite;
+}
+
+@keyframes backgroundSlide {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color:#57b846;
+    color: #fff;
+    margin:0%
+    
+    ;
+}
+
+.gift-list {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: wheat;
+    background-image: url('ai-gift-shop-background4.jpg');
+    border: #3b09d1 solid;
+     border-radius: 10px;
+    justify-content: left;
+    margin: 20px;
+    width: 500px;
+    margin-left: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: backgroundSlide 20s linear infinite;
+
+}
+
+.gift {
+    background-color: #fff;
+    border: 3px dashed #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    max-width: 300px;
+    margin-left: 70px;
+   
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.buy-button {
+    background-color: #ff7043;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    font-size: medium;
+    width: 200px;
+    align-content: center;
+    border-radius: 10px;
+
+}
+
+.buy-button:hover {
+    background-color: #3b09d1;
+}
+
+.buy-button i {
+    margin-right: 5px;
+   
+}
+
+.icon {
+    margin-right: 5px;
+    color: #57b846;
+}
+    
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color:#57b846;
+    font-size: larger;
+    color: #fff;
+}
+.gift-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.item{
+    text-decoration:underline;
+    display: inline;
+    margin-left: 10px;
+    font-style:normal;
+    font-size: large;
+}
+a{
+    color:whitesmoke ;
+}
+/* styles.css */
+
+/* ... Existing styles ... */
+
+/* Quote animation */
+.animated-quote {
+    text-align: center; /* Center the quote */
+    padding: 10px; /* Adjust padding for smaller screens */
+    background:linear-gradient(to left,rgb(100, 228, 235),white,rgb(217, 220, 31));
+    color: #57b846;
+    border: #111110 5px none;
+    border-radius: 50px;
+    font-size: 16px; /* Decrease font size for smaller screens */
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative; /* Change to relative positioning */
+    transform: translateY(0); /* Reset vertical positioning */
+    white-space: normal; /* Allow line breaks */
+    overflow: hidden; /* Show all text */
+    margin: 20px auto; /* Center horizontally */
+    max-width: 80%; /* Limit width for better readability */
+}
+
+.animated-quote p {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInWords 10s linear infinite;
+}
+.animated-quote {
+    display: flex;
+    animation: zoom 5s infinite alternate ease-in-out;
+   
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.8);
+       
+    }
+    to {
+        transform: scale(1);
+        
+    }
+}
+
+@keyframes fadeInWords {
+    0%, 100% {
+        color: #3b09d1; /* Initial and final color */
+        transform: translateY(-50%) translateX(-100%);
+    }
+    10% {
+        color: #fc270b; /* Color change for the first iteration */
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+    25% {
+        color: #d0e71f; /* Color change for the second iteration */
+        transform: translateY(-45%) translateX(0); /* Adjust the vertical position */
+    }
+    40% {
+        color: #d91c80; /* Color change for the third iteration */
+        transform: translateY(-55%) translateX(0); /* Adjust the vertical position */
+    }
+    /* Add more color changes for subsequent iterations */
+    100% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(100%);
+    }
+}
+
+/* Pause animation for 5 seconds after completion */
+
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: contain;
+        background-position: center;
+    }
+    .animated-quote {
+        padding: 10px;
+        font-size: 14px;
+        margin: 10px auto;
+        max-width: 90%;
+    }
+
+    .gift-list {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .gift {
+        max-width: 100%;
+        margin: 10px auto;
+    }
+
+    .buy-button {
+        width: 100%;
+    }
+    .gift-image {
+        max-width: 100%;
+    }
+    .shapes-container {
+        display: none;
+    }
+}
+/* styles.css */
+
+/* Your existing styles */
+
+/* Adding animated shapes to the body tag */
+body {
+    position: relative; /* Needed for absolute positioning of shapes */
+}
+
+.shapes-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    animation: shapeAnimation 10s infinite alternate ease-in-out;
+    opacity: 0.6;
+}
+
+.shape.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 20%; /* Adjust the position as needed */
+    left: calc(50% - 25px); /* Center the shape */
+}
+.shape.circle1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 40%; /* Adjust the position as needed */
+    left: calc(60% - 25px); /* Center the shape */
+}
+.shape.circle2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 30%; /* Adjust the position as needed */
+    left: calc(65% - 25px); /* Center the shape */
+}
+.shape.circle3 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 40%; /* Adjust the position as needed */
+    left: calc(60% - 25px); /* Center the shape */
+}
+.shape.circle4 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 70%; /* Adjust the position as needed */
+    left: calc(70% - 25px); /* Center the shape */
+}
+.shape.circle5 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 25%; /* Adjust the position as needed */
+    left: calc(75% - 25px); /* Center the shape */
+}
+
+@keyframes shapeAnimation {
+    from {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        background-color: #3b09d1;
+    }
+    to {
+        transform: translateY(-100%) scale(0.8);
+        opacity: 0;
+        background-color: #f54804;
+
+    }
+}
+
+/* Your existing styles */
+
+/* ... Rest of your existing styles ... */
+
+
+

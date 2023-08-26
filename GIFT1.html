@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gift Guide - Results</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- In your HTML's <head> section -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!--<script src="GIFTJS.js"></script>-->
+</head>
+<body>
+    <div class="shapes-container">
+        <div class="shape circle" style="background-color: #fc270b;"></div>
+        <div class="shape circle1" style="background-color: #fc270b;"></div>
+        <div class="shape circle2" style="background-color: #fc270b;"></div>
+        <div class="shape circle3" style="background-color: #fc270b;"></div>
+        <div class="shape circle4" style="background-color: #fc270b;"></div>
+        <div class="shape circle5" style="background-color: #fc270b;"></div>
+    </div>
+    <h1>Gift Guide - Results</h1>
+    <div class="gift-list">
+        <!-- Sample gift -->
+        <div class="gift">
+            <img src="gett.jpg" alt="Gift Title" class="gift-image">
+            
+            <h2 style="text-align: center;"><q >YOU ARE MY HAPPY PLACE</q></h2>
+            <p><span class="icon"><i class="fas fa-dollar-sign"></i></span>Price:<span id="pr"> $50</span></p>
+            <p><span class="icon"><i class="fas fa-dollar-sign"></i></span>Previous Price: <span>$60</span></p>
+            <p><span class="icon"><i class="fas fa-tags"></i></span>Condition: New</p>
+            <p><span class="icon"><i class="fas fa-star"></i></span>Rating: 4.5 / 5</p>
+            <p><span class="icon"><i class="fas fa-comment"></i></span>Reviews: 120</p>
+            <p><span class="icon"><i class="fas fa-star"></i></span>Store Rating: 4.8 / 5</p>
+            <p><span class="icon"><i class="fas fa-comment"></i></span>Store Reviews: 500</p>
+            <p><span class="icon"><i class="fas fa-chart-bar"></i></span>Number of Comparisons: 10</p>
+            <p>Description: Lorem ipsum dolor sit amet...</p>
+            <button class="buy-button" onclick="buyButtonClick()"><i class="fas fa-shopping-cart"></i>Buy</button>
+        </div>
+        <!-- Add more gifts here -->
+    </div>
+    
+    </div>
+    <div class="animated-quote">
+        <p class="quote-text">Bringing the Future to Your Fingertips: Discover AI Wonders at Our Gift Shop!</p>
+    </div>
+    
+    <footer>
+        <p>&copy; <strong>2017–2023 Openagent</strong></p>
+        <span><pre class="item"><a href="#">Privacy</a></pre><pre class="item"><a href="#">Terms</a></pre><pre class="item"><a href="#">Support</a></pre></span>
+    </footer> 
+    
+    <script>
+       
+       function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // Read URL parameters and update content
+    const relationship = getUrlParameter('relationship');
+    const age = getUrlParameter('age');
+    const occasion = getUrlParameter('occasion');
+    const interests = getUrlParameter('interests');
+    const budget = getUrlParameter('budget');
+
+    // Update the gift details based on the URL parameters
+    document.querySelector(".gift-image").src = "gett.jpg"; // Set your image source
+    document.querySelector("q").textContent = "YOU ARE MY HAPPY PLACE";
+    document.getElementById("pr").textContent = "$"+ budget; // Replace with actual price
+    // Update other gift details accordingly
+
+    function buyButtonClick() {
+        alert("Thank you for your purchase!");
+    }
+    </script>
+</body>
+</html>

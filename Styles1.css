@@ -1,0 +1,93 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background:linear-gradient(to left,rgb(100, 228, 235),white,rgb(217, 220, 31));
+
+    color: #444;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #57b846;
+    color: #fff;
+    margin-bottom: 20px;
+    margin: 0%;
+}
+
+.gift-form {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gift-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.gift-form input[type="text"],
+.gift-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    max-width: 300px;
+}
+p{
+    text-align: center;
+}
+
+.get-gifts-button {
+    background-color: #ff7043;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+      
+}
+
+.get-gifts-button:hover {
+    background-color: #211cbf;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #57b846;
+    color: #fff;
+    
+}
+.gift-form button {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .gift-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .gift-form input[type="text"],
+    .gift-form input[type="number"] {
+        width: 100%;
+        
+    }
+}
